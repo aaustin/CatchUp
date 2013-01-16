@@ -1,0 +1,331 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ 
+             
+    <RelativeLayout
+		android:id="@+id/relativeLayout2"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	    android:layout_marginTop="5dp" >        
+
+		
+        <RelativeLayout
+	        android:id="@+id/relativeLayout3"
+	        android:layout_width="75dp"
+	        android:layout_height="75dp"        
+	        android:layout_marginLeft="5dp" 
+	        android:background="@drawable/portrait_background"  > 	        
+	        
+	        <ImageView
+				android:id="@+id/imgPortrait"
+				android:layout_width="60dp"
+				android:layout_height="60dp"        
+				android:contentDescription="@string/image_content"
+				android:src="@drawable/blank_portrait"
+				android:layout_centerInParent="true" />  
+			
+		</RelativeLayout>
+	    
+	    <TextView
+	        android:id="@+id/txtRowFirstname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_toRightOf="@+id/relativeLayout3"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="5dp"
+	        android:textSize="20dp"
+	        android:text="Alex"
+	        android:textStyle="bold"
+	        android:textColor="#004476"   />
+	    
+	    <TextView
+	        android:id="@+id/txtRowLastname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="3dp"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="5dp"
+	        android:layout_toRightOf="@+id/txtRowFirstname"
+	        android:textSize="20dp" 
+	        android:text="Austin"
+	        android:textStyle="bold"
+	        android:textColor="#004476" />
+    
+	    <Button
+			android:id="@+id/cmdUnsubscribe"
+		    android:layout_width="138dp"
+		    android:layout_height="40dp" 
+		    android:layout_marginRight="15dp"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="3dp"
+		    android:layout_below="@+id/txtRowLastname"
+		    android:background="@drawable/cmd_remove_catchup" />
+		    	
+   	</RelativeLayout>
+    
+    
+    
+ 	<ImageView
+		android:id="@+id/imgHeading1"
+		android:layout_width="150dp" 
+		android:layout_height="wrap_content"
+		android:src="@drawable/catchup_every_header"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="-3dp"
+		android:layout_below="@+id/relativeLayout2"
+		android:contentDescription="@string/image_content" />
+ 	
+ 	
+ 	<Button
+		android:id="@+id/cmdChat"
+		android:layout_width="50dp"
+		android:layout_height="37dp"
+		android:layout_alignParentRight="true"
+		android:layout_alignTop="@+id/imgHeading1"
+		android:layout_marginRight="15dp"
+		android:background="@drawable/cmd_chat"  /> 
+		
+	<Button
+		android:id="@+id/cmdEmail"
+		android:layout_width="50dp"
+		android:layout_height="37dp"
+		android:layout_alignTop="@+id/imgHeading1"
+		android:layout_toLeftOf="@+id/cmdChat"
+		android:layout_marginRight="10dp"
+		android:background="@drawable/cmd_mail"  /> 
+	
+	
+ 	
+ 	<RelativeLayout
+		android:id="@+id/relativeLayout1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:layout_below="@+id/imgHeading1"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp"
+	    android:background="@drawable/gray_dent" >    
+	    
+        
+        
+    
+    
+	    <RelativeLayout
+			android:id="@+id/cmdSmallestSubscription"
+		    android:layout_width="fill_parent"
+		    android:layout_height="40dp" 
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp" >    
+		    
+	        <ImageView
+				android:id="@+id/imgSmallestTitle"
+				android:layout_width="80dp" 
+				android:layout_height="35dp"
+				android:src="@drawable/two_weeks_header"
+				android:layout_marginTop="2dp"
+				android:layout_marginLeft="8dp"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentLeft="true"
+				android:contentDescription="@string/image_content" />
+	        
+	        
+	        <ImageView
+			    android:id="@+id/cmdSmallestCheck"
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentRight="true"
+			    android:layout_marginRight="8dp"
+			    android:src="@drawable/check" 
+			    android:contentDescription="@string/image_content"/>
+	        
+	    </RelativeLayout>
+	    
+	    <ImageView
+			android:id="@+id/imgDivider1"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:src="@drawable/gray_divider"
+			android:layout_marginTop="1dp"
+			android:layout_marginBottom="1dp"
+			android:layout_below="@+id/cmdSmallestSubscription"
+			android:scaleType="fitCenter"
+			android:layout_centerHorizontal="true"
+			android:contentDescription="@string/image_content" />
+	    
+	    <RelativeLayout
+			android:id="@+id/cmdSmallerSubscription"
+		    android:layout_width="fill_parent"
+		    android:layout_height="40dp" 
+		    android:layout_below="@+id/imgDivider1"
+		    android:layout_marginTop="3dp"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp" >    
+		    
+		    <ImageView
+				android:id="@+id/imgSmallerTitle"
+				android:layout_width="80dp" 
+				android:layout_height="35dp"
+				android:src="@drawable/one_month_header"
+				android:layout_marginLeft="8dp"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentLeft="true"
+				android:contentDescription="@string/image_content" />
+	        
+	        <ImageView
+			    android:id="@+id/cmdSmallerCheck"
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentRight="true"
+			    android:layout_marginRight="8dp"
+			    android:src="@drawable/check" 
+			    android:contentDescription="@string/image_content"/>
+	        
+	    </RelativeLayout>
+	    
+	    <ImageView
+			android:id="@+id/imgDivider2"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:src="@drawable/gray_divider"
+			android:layout_marginTop="1dp"
+			android:layout_marginBottom="1dp"
+			android:layout_below="@+id/cmdSmallerSubscription"
+			android:scaleType="fitCenter"
+			android:layout_centerHorizontal="true"
+			android:contentDescription="@string/image_content" />
+	    
+	    
+	    <RelativeLayout
+			android:id="@+id/cmdLargerSubscription"
+		    android:layout_width="fill_parent"
+		    android:layout_height="40dp" 
+		    android:layout_below="@+id/imgDivider2"
+		    android:layout_marginTop="3dp"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp" > 
+		       
+		    <ImageView
+				android:id="@+id/imgLargerTitle"
+				android:layout_width="90dp" 
+				android:layout_height="35dp"
+				android:src="@drawable/two_month_header"
+				android:layout_marginLeft="8dp"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentLeft="true"
+				android:contentDescription="@string/image_content" />
+		    
+	        <ImageView
+			    android:id="@+id/cmdLargerCheck"
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentRight="true"
+			    android:layout_marginRight="8dp"
+			    android:src="@drawable/check" 
+			    android:contentDescription="@string/image_content"/>
+	        
+	    </RelativeLayout>
+	    
+	    <ImageView
+			android:id="@+id/imgDivider3"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:src="@drawable/gray_divider"
+			android:layout_marginTop="1dp"
+			android:layout_marginBottom="1dp"
+			android:layout_below="@+id/cmdLargerSubscription"
+			android:scaleType="fitCenter"
+			android:layout_centerHorizontal="true"
+			android:contentDescription="@string/image_content" />
+	    
+	    <RelativeLayout
+			android:id="@+id/cmdLargestSubscription"
+		    android:layout_width="fill_parent"
+		    android:layout_height="40dp" 
+		    android:layout_below="@+id/imgDivider3"
+		    android:layout_marginTop="2dp"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp" >  
+		      
+		    <ImageView
+				android:id="@+id/imgLargestTitle"
+				android:layout_width="80dp" 
+				android:layout_height="35dp"
+				android:src="@drawable/six_month_header"
+				android:layout_marginLeft="7dp"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentLeft="true"
+				android:contentDescription="@string/image_content" />
+		    
+	        <ImageView
+			    android:id="@+id/cmdLargestCheck"
+			    android:layout_width="25dp"
+			    android:layout_height="25dp"
+			    android:layout_centerVertical="true"
+			    android:layout_alignParentRight="true"
+			    android:layout_marginRight="8dp"
+			    android:src="@drawable/check" 
+			    android:contentDescription="@string/image_content"/>
+	        
+	    </RelativeLayout>
+    
+   
+   
+    </RelativeLayout>
+   
+ 	
+	<ImageView
+		android:id="@+id/imgHeading2"
+		android:layout_width="140dp" 
+		android:layout_height="wrap_content"
+		android:src="@drawable/next_catchup_header"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="15dp"
+		android:layout_marginBottom="-3dp"
+		android:layout_below="@+id/relativeLayout1"
+		android:contentDescription="@string/image_content" />
+ 	
+ 	<RelativeLayout
+		android:id="@+id/layoutEditDate"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:layout_below="@+id/relativeLayout1"
+	    android:layout_toRightOf="@+id/imgHeading2"
+	    android:layout_marginLeft="3dp"
+	    android:layout_marginTop="5dp"
+	    android:layout_marginRight="5dp"
+	    android:background="@drawable/gray_dent" > 
+	
+ 	    <ImageView
+			android:id="@+id/cmdEditDate"
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="8dp"
+			android:src="@drawable/right_arrow" 
+			android:contentDescription="@string/image_content"/>
+
+ 	    <TextView
+ 	        android:id="@+id/txtDate"
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        android:layout_alignParentLeft="true"
+ 	        android:layout_centerVertical="true"
+ 	        android:layout_marginLeft="13dp"
+ 	        android:layout_marginTop="-4dp"
+ 	        android:textColor="#000000"
+ 	        android:textSize="18dp"
+ 	        android:textStyle="bold"
+ 	        android:text="May 30, 2012" />
+ 	    
+    </RelativeLayout>
+   
+ 	
+ 	
+</RelativeLayout>

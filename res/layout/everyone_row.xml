@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/listrow_background"  >
+    
+    <RelativeLayout
+		android:id="@+id/relativeLayout4"
+	    android:layout_width="80dp"
+	    android:layout_height="80dp"        
+	    android:layout_marginLeft="5dp" 
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentLeft="true"  > 
+    <ImageView
+		android:id="@+id/relativeLayout3"
+	    android:layout_width="75dp"
+	    android:layout_height="75dp"        
+	    android:layout_marginTop="-5dp"
+	    android:layout_marginLeft="2dp" 
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentLeft="true"
+	    android:background="@drawable/portrait_background"  > 	        
+	        
+	    </ImageView>
+	    <ImageView
+			android:id="@+id/imgPortrait"
+			android:layout_width="60dp"
+			android:layout_height="60dp"        
+			android:contentDescription="@string/image_content"
+			android:background="@drawable/blank_portrait"
+			android:layout_centerInParent="true" />  			
+	    			
+	
+	</RelativeLayout>
+		
+	<TextView
+	        android:id="@+id/txtRowFirstname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/relativeLayout4"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginLeft="6dp"
+	        android:textSize="20dp"
+	        android:text="Alex"
+	        android:textStyle="bold"
+	        android:textColor="#004476" />
+	    
+	    <TextView
+	        android:id="@+id/txtRowLastname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="4dp"
+	        android:layout_alignBaseline="@+id/txtRowFirstname"
+	        android:layout_toRightOf="@+id/txtRowFirstname"
+	        android:textSize="20dp"
+	        android:text="Austin"
+	        android:textStyle="bold"
+	        android:textColor="#004476" />
+	
+    <RelativeLayout
+		android:id="@+id/relativeLayout1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"        
+	    android:layout_toRightOf="@+id/relativeLayout4"
+	    android:layout_below="@+id/txtRowFirstname"
+	    android:layout_marginTop="3dp"
+	    android:layout_marginBottom="5dp"
+	    android:layout_marginLeft="3dp"   > 
+	    
+	<Button
+		android:id="@+id/cmdSmallerSub"
+		android:layout_width="88dp"
+		android:layout_height="43dp"
+		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="5dp"
+		android:background="@drawable/cmd_one_month"  /> 
+		
+	<Button
+		android:id="@+id/cmdLargerSub"
+		android:layout_width="88dp"
+		android:layout_height="43dp"
+		android:layout_toRightOf="@+id/cmdSmallerSub"
+		android:layout_centerVertical="true"
+		android:background="@drawable/cmd_two_month"  /> 
+		
+	
+		    
+    </RelativeLayout>
+    
+    <Button
+		android:id="@+id/cmdArrow"
+		android:layout_width="35dp"
+		android:layout_height="35dp"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="8dp"
+		android:background="@drawable/cmd_expand_arrow"  />
+	  
+        
+</RelativeLayout>

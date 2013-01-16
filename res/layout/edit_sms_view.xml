@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<ImageView
+		android:id="@+id/imgHeading2"
+		android:layout_width="150dp" 
+		android:layout_height="wrap_content"
+		android:src="@drawable/sms_content_header"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:contentDescription="@string/image_content" />
+
+    <EditText
+        android:id="@+id/txtSMSContent"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/imgHeading2"
+        android:layout_marginTop="-3dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:maxLength="160"
+        android:inputType="textMultiLine"
+        android:background="@drawable/edit_text"
+        android:textColor="#727e8e" />
+
+    <TextView
+        android:id="@+id/txtLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtSMSContent"
+        android:layout_below="@+id/txtSMSContent"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="0/160"
+        android:textColor="#1f679c" />
+        
+</RelativeLayout>

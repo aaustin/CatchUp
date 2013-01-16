@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"    
+    android:background="@drawable/listrow_background" >
+    
+    <RelativeLayout
+		android:id="@+id/relativeLayout4"
+	    android:layout_width="80dp"
+	    android:layout_height="80dp"        
+	    android:layout_marginLeft="5dp" 
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentLeft="true"  > 
+    
+	<ImageView
+		android:id="@+id/relativeLayout3"
+	    android:layout_width="75dp"
+	    android:layout_height="75dp"        
+	    android:layout_marginTop="-5dp"
+	    android:layout_marginLeft="2dp" 
+	    android:layout_centerVertical="true"
+	    android:layout_alignParentLeft="true"
+	    android:background="@drawable/portrait_background"  > 	        
+	        
+	    </ImageView>
+	    <ImageView
+			android:id="@+id/imgPortrait"
+			android:layout_width="60dp"
+			android:layout_height="60dp"        
+			android:contentDescription="@string/image_content"
+			android:background="@drawable/blank_portrait"
+			android:layout_centerInParent="true" />  
+			
+	
+	</RelativeLayout>
+		
+    <RelativeLayout
+		android:id="@+id/relativeLayout1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"        
+	    android:layout_toRightOf="@+id/relativeLayout4"
+	    android:layout_centerVertical="true"
+	    android:layout_marginLeft="10dp"   > 
+
+	    <TextView
+	        android:id="@+id/txtRowFirstname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:textSize="20dp"
+	        android:text="Alex"
+	        android:textStyle="bold"
+	        android:textColor="#004476" />
+	    
+	    <TextView
+	        android:id="@+id/txtRowLastname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="4dp"
+	        android:layout_alignBaseline="@+id/txtRowFirstname"
+	        android:layout_toRightOf="@+id/txtRowFirstname"
+	        android:textSize="20dp"
+	        android:text="Austin"
+	        android:textStyle="bold"
+	        android:textColor="#004476" />
+	    
+		<TextView
+	        android:id="@+id/txtLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="3dp"
+	        android:layout_alignLeft="@+id/txtRowFirstname"
+	        android:layout_below="@+id/txtRowFirstname"
+	        android:textSize="13dp" 
+	        android:text="@string/catchups_upcoming_date_label"
+	        android:textColor="#718594" />
+	    
+		<TextView
+	        android:id="@+id/txtDueDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="2dp"
+	        android:layout_alignLeft="@+id/txtLabel"
+	        android:layout_below="@+id/txtLabel"
+	        android:textSize="14dp"
+	        android:textStyle="bold"
+	        android:text="Oct 31, 2012" 
+	        android:textColor="#718594" />
+        
+    </RelativeLayout>
+    
+	<Button
+		android:id="@+id/cmdArrow"
+		android:layout_width="35dp"
+		android:layout_height="35dp"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="8dp"
+		android:background="@drawable/cmd_expand_arrow"  />  
+</RelativeLayout>

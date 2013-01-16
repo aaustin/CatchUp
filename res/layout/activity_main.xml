@@ -1,0 +1,128 @@
+<TabHost
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/all_background">
+ 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+ 
+        <RelativeLayout
+	        android:id="@+id/relativeLayout1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"     >  
+	             
+            
+
+			<ImageView
+				android:id="@+id/imgTitleBar"
+				android:layout_width="wrap_content" 
+				android:layout_height="55dp"
+				android:scaleType="centerCrop"
+				android:src="@drawable/menu_bar"
+				android:contentDescription="@string/image_content"/>  
+				
+			<ImageView
+				android:id="@+id/imgTitle"
+				android:layout_width="wrap_content" 
+				android:layout_height="30dp"
+				android:src="@drawable/catchups_title"
+				android:layout_centerInParent="true"
+				android:contentDescription="@string/image_content"/>
+			
+			<Button
+		        android:id="@+id/cmdBack"
+		        android:layout_width="60dp"
+		        android:layout_height="38dp"
+		        android:layout_centerVertical="true"
+		        android:layout_alignParentLeft="true"
+		        android:layout_marginLeft="5dp"
+		        android:background="@drawable/cmd_back" />   
+		        
+			<Button
+		        android:id="@+id/cmdSave"
+		        android:layout_width="66dp"
+		        android:layout_height="36dp"
+		        android:layout_centerVertical="true"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="5dp"
+		        android:background="@drawable/cmd_save" />   
+	 
+        </RelativeLayout>
+ 
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0"/>
+ 
+        <FrameLayout
+            android:id="@+id/realtabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" 
+            android:layout_marginTop="-3dp"
+            android:layout_marginBottom="3dp"/>
+ 
+        <RelativeLayout
+	        android:id="@+id/relativeLayout2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	           >
+	                     
+	        
+   	        <TabWidget
+	            android:id="@android:id/tabs"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"	   
+		    	android:layout_centerHorizontal="true"
+		    	android:background="#000000"/>
+        	
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+     <RelativeLayout
+	 	android:id="@+id/introInstructions"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+                
+      	        
+         <ImageView
+			android:id="@+id/imgIntroTitle"
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true" 
+			android:layout_centerHorizontal="true"
+			android:scaleType="fitCenter"
+			android:contentDescription="@string/image_content" />  
+			
+     	<ImageView
+			android:id="@+id/imgIntroInstructions"
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true" 
+			android:scaleType="fitCenter"
+			android:contentDescription="@string/image_content" />
+        
+        
+        
+        <Button
+		    android:id="@+id/cmdGetStarted"
+		    android:layout_width="126dp"
+		    android:layout_height="50dp"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentRight="true"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginBottom="70dp"
+		    android:background="@drawable/cmd_get_started" />   
+        
+     </RelativeLayout>
+     
+     
+</TabHost>
