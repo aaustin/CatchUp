@@ -210,8 +210,7 @@ public class MainActivity extends FragmentActivity {
         	
 			imgLogo.setImageResource(R.drawable.blur_title);
 			imgHeader.setImageResource(R.drawable.blur_instructions);
-			blurInstructions.setBackgroundResource(R.drawable.blur_intro);
-        	blurInstructions.setVisibility(RelativeLayout.VISIBLE);
+			blurInstructions.setVisibility(RelativeLayout.VISIBLE);
         	pHelper.set_first_bootup_status(false);
         } else {
         	blurInstructions.setVisibility(RelativeLayout.GONE);

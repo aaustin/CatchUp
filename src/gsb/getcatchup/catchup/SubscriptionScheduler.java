@@ -66,7 +66,11 @@ public class SubscriptionScheduler {
 		
 		for (int i = 0; i < subs.size(); i++) {
 			int dayIndex = days_from_now(subs.get(i).catchupdate);
-			if (dayIndex >= 0) {
+			if (dayIndex > dayArray.size()) {
+				for (int j = dayArray.size(); j <= dayIndex; j++)
+					dayArray.add(new DayMap(i, null));
+			}
+			if (dayIndex >= 0) { 
 				dayArray.get(dayIndex).scheduledGuy = subs.get(i);
 				dayArray.get(dayIndex).daysFromNow = dayIndex;
 			}

@@ -39,8 +39,10 @@ public class ParseContacts {
 		for (int i = 0; i < users.size(); i++) {
 			if (users.get(i).getName().length() > 0) {				
 				curr = solve_names(users.get(i).getName(), curr);			
-				curr.datasourceid = users.get(i).getId();
-				cda.add_new_contact(curr);
+				if (curr != null) {
+					curr.datasourceid = users.get(i).getId();
+					cda.add_new_contact(curr);
+				}
 			}
 		}
 		
@@ -60,15 +62,19 @@ public class ParseContacts {
 		for(int i = 0; i < split.length-1; i++)
 			firstname = firstname + split[i] + " ";
 		
-		contact.firstname = firstname.trim();
-		contact.lastname = lastname;
-		
-		contact.firstname = contact.firstname.substring(0, 1).toUpperCase() + contact.firstname.substring(1);
-		contact.lastname = contact.lastname.substring(0, 1).toUpperCase() + contact.lastname.substring(1);
-		contact.firstname = contact.firstname.replace("'", "''");
-		contact.lastname = contact.lastname.replace("'", "''");		
+		if (contact.firstname.length() > 0 && contact.lastname.length() > 0) {
+			contact.firstname = firstname.trim();
+			contact.lastname = lastname;
+			
+			contact.firstname = contact.firstname.substring(0, 1).toUpperCase() + contact.firstname.substring(1);
+			contact.lastname = contact.lastname.substring(0, 1).toUpperCase() + contact.lastname.substring(1);
+			contact.firstname = contact.firstname.replace("'", "''");
+			contact.lastname = contact.lastname.replace("'", "''");		
 				
-		return contact;
+			return contact;
+		} else
+			return null;
+		
 	}
 	
 	public void faster_download_phone_contacts() {

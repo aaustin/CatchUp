@@ -199,17 +199,19 @@ public class CatchupsFragment extends Fragment {
 	public class UpdateListView implements FragmentCallBack {
 		public void callback(int code, int index) {			
 			
-			if (code < 0) {
-		    	for(int i = 0; i < overduePeeps.size(); i++)
-		    		if (overduePeeps.get(i).index == index) {
-		    			overduePeeps.remove(i);	
-			    			break;
-			    	}
-			    	for(int i = 0; i < upcomingPeeps.size(); i++)
-			    		if (upcomingPeeps.get(i).index == index) {
-			    			upcomingPeeps.remove(i); 
-			    			break;
-			    		}		    	  
+			if (code < 0) {				
+			    for(int i = 0; i < overduePeeps.size(); i++)
+			    	if (overduePeeps.get(i).index == index) {
+			    		overduePeeps.remove(i);	
+				   			break;
+				   	}
+				
+				
+				for(int i = 0; i < upcomingPeeps.size(); i++)
+				    if (upcomingPeeps.get(i).index == index) {
+				    	upcomingPeeps.remove(i); 
+				    	break;
+				    }		    	  
 		    } else if (code >= 0) {
 		    	refresh_views();
 		    }

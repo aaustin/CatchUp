@@ -3,7 +3,7 @@
     android:id="@android:id/tabhost"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/all_background">
+    android:background="#ecf0f3">
  
     <LinearLayout
         android:orientation="vertical"
@@ -29,7 +29,7 @@
 				android:id="@+id/imgTitle"
 				android:layout_width="wrap_content" 
 				android:layout_height="30dp"
-				android:src="@drawable/catchups_title"
+				
 				android:layout_centerInParent="true"
 				android:contentDescription="@string/image_content"/>
 			
@@ -72,8 +72,8 @@
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	           >
-	                     
 	        
+            
    	        <TabWidget
 	            android:id="@android:id/tabs"
 	            android:layout_width="fill_parent"
@@ -86,11 +86,17 @@
         
     </LinearLayout>
     
-     <RelativeLayout
+    <RelativeLayout
 	 	android:id="@+id/introInstructions"
 	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent" >
+	    android:layout_height="fill_parent">
                 
+        <RelativeLayout
+	 	android:id="@+id/intro1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#CC515151"
+	    android:layout_above="@+id/intro2" >
       	        
          <ImageView
 			android:id="@+id/imgIntroTitle"
@@ -107,6 +113,7 @@
 			android:layout_height="wrap_content"
 			android:layout_alignParentBottom="true"
 			android:layout_centerHorizontal="true" 
+			android:layout_marginBottom="-30dp"
 			android:scaleType="fitCenter"
 			android:contentDescription="@string/image_content" />
         
@@ -119,10 +126,19 @@
 		    android:layout_alignParentBottom="true"
 		    android:layout_alignParentRight="true"
 		    android:layout_marginRight="15dp"
-		    android:layout_marginBottom="70dp"
-		    android:background="@drawable/cmd_get_started" />   
+		    android:layout_marginBottom="20dp"
+		    android:background="@drawable/cmd_get_started" />  
+		     
+		 </RelativeLayout>
+		 
+         <RelativeLayout
+		 	android:id="@+id/intro2"
+		    android:layout_width="fill_parent"
+		    android:layout_height="65dp"
+		    android:background="#30515151"
+		    android:layout_alignParentBottom="true"
+		    />
         
      </RelativeLayout>
-     
      
 </TabHost>

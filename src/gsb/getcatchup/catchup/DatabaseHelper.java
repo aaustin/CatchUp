@@ -62,7 +62,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	  @Override
 	  public SQLiteDatabase getWritableDatabase() {
 		  SQLiteDatabase db = SQLiteDatabase.openDatabase(DATABASE_FILE_PATH + DATABASE_NAME, null, SQLiteDatabase.OPEN_READWRITE + SQLiteDatabase.CREATE_IF_NECESSARY);
-		  
+		  		 
 		  onCreate(db);
 		  return db;
 	  }

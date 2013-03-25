@@ -2,8 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relLayout"
     android:layout_width="match_parent"
-	android:layout_height="fill_parent" 
-	android:background="@drawable/splash_background" >
+	android:layout_height="fill_parent"
+	android:background="#3ea7d6"
+	
+ >
 	
     <ImageView
 		android:id="@+id/imgLogo"
